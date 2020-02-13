@@ -1,0 +1,18 @@
+#+TITLE: notes for Ada databases
+#+OPTIONS: ^:{} toc:nil
+#+TOC: headlines 1
+#+STARTUP: content
+
+* Brief
+Write Ada API to manage data without database engine
+
+* Main points
+- links between data
+- tables
+- transactions
+- atomicity
+- rules
+- serialization
+* implementations
+** doing-without-databases-in-the-21st-century
+https://codeburst.io/doing-without-databases-in-the-21st-century-6e25cf495373
