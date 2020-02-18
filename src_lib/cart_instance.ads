@@ -4,8 +4,8 @@
 
 package Cart_Instance is
 
-   type Type_Definition is
-     new Cart_Interface.Type_Definition
+   type Definition is
+     new Cart_Interface.Definition
    with record
       Customer_Id   : Id_T          := Invalid_Id;
       Customer_Name : access String := null;
@@ -13,27 +13,27 @@ package Cart_Instance is
    end record;
 
    procedure Initialize
-     (Self        : in out Type_Definition;
+     (Self        : in out Definition;
       Person_Name : in     String);
 
    procedure Initialize
-     (Self        : in out Type_Definition;
+     (Self        : in out Definition;
       Person_Name : in     String;
       Person_Id   : in     Id_T);
 
    procedure Add_Book
-     (Self    : in out Type_Definition;
+     (Self    : in out Definition;
       Book_Id : in     Id_T);
 
    procedure Remove_Book
-     (Self    : in out Type_Definition;
+     (Self    : in out Definition;
       Book_Id : in     String);
 
    function Get_Contents
-     (Self : in Type_Definition)
+     (Self : in Definition)
      return Id_List;
 
    procedure Clear
-     (Self : in out Type_Definition);
+     (Self : in out Definition);
 
 end Cart_Instance;

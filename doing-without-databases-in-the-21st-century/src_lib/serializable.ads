@@ -1,14 +1,16 @@
 package Serializable is
 
-   type Interface_Definition is interface;
+   type Byte_Buffer_Type is array (Natural range <>) of Unsigned_64;
+
+   type Serializable_Interface is interface;
 
    function Serialize
-     (Self : in Interface_Definition)
+     (Self : in Serializable_Interface)
      return Byte_Buffer
      is abstract;
 
    procedure Deserialize
-     (Self   :    out Interface_Definition;
+     (Self   :    out Serializable_Interface;
       Buffer : in     Byte_Buffer)
      is abstract;
 

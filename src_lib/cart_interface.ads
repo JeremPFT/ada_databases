@@ -4,30 +4,30 @@
 
 package Cart_Interface is
 
-   type Type_Definition is interface;
+   type Definition is interface;
 
    procedure Initialize
-     (Self   : in out Type_Definition;
+     (Self   : in out Definition;
       Person : in     String);
 
    procedure Initialize
-     (Self   : in out Type_Definition;
+     (Self   : in out Definition;
       Person : in     String;
       Id     : in     Id_T);
 
    procedure Add_Book
-     (Self    : in out Type_Definition;
+     (Self    : in out Definition;
       Book_Id : in     Id_T);
 
    procedure Remove_Book
-     (Self    : in out Type_Definition;
+     (Self    : in out Definition;
       Book_Id : in     String);
 
    function Get_Contents
-     (Self : in Type_Definition)
+     (Self : in Definition)
      return Id_List;
 
    procedure Clear
-     (Self : in out Type_Definition);
+     (Self : in out Definition);
 
 end Cart_Interface;
